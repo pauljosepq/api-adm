@@ -5,9 +5,10 @@ services:
       context: .
       dockerfile: dockerfile
     ports:
-      - '3000:3000'
+      - '3001:3001'
     environment:
       - MONGO_URI=mongodb://root:root@mongodb:27017/?tls=false&authMechanism=DEFAULT
+      - JWT_SECRET=Bernardo01
     depends_on:
       - mongodb
 
